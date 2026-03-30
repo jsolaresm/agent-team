@@ -1,0 +1,16 @@
+# OpenClaw
+.openclaw/
+*.session
+auth-profiles.json
+
+# Secrets
+.env
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
