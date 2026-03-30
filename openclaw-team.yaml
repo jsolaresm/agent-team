@@ -1,0 +1,16 @@
+# Configuración global del equipo de agentes
+name: agent-team
+version: "1.0"
+
+model:
+  provider: anthropic
+  model: claude-sonnet-4-6
+  # api_key: usar variable de entorno ANTHROPIC_API_KEY
+
+agents:
+  - !include agents/orchestrator/config.yaml
+  - !include agents/backend/config.yaml
+  - !include agents/frontend/config.yaml
+  - !include agents/qa/config.yaml
+  - !include agents/devsecops/config.yaml
+  - !include agents/devops/config.yaml

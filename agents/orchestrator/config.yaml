@@ -1,0 +1,17 @@
+id: orchestrator
+name: Orquestador
+default: true
+description: Analiza tareas y delega al especialista correcto
+workspace: ~/openclaw-workspaces/orchestrator
+agentDir: ~/.openclaw/agents/orchestrator
+model:
+  primary: anthropic/claude-sonnet-4-6
+persona:
+  role: "Orquestador técnico de equipo de software"
+  rules: |
+    Analiza cada tarea y determina qué agente especialista
+    debe responderla. Delega usando agentToAgent.
+    Siempre responde en español.
+permissions:
+  allowedCommands: [ls, cat, echo]
+  blockedCommands: ["rm -rf", sudo]
